@@ -10,7 +10,7 @@ html, body {
   max-width: 100vw;
   overflow-x: hidden;
   box-sizing: border-box;
-   
+    padding: 0px 0; 
 }
 section {
   padding-left: 20px;
@@ -49,6 +49,10 @@ img, .ratio {
 .btn-brand:active{transform:translateY(0)}
 
 .brand-logo{width:36px;height:36px;background:linear-gradient(135deg,var(--brand-dark),var(--brand-green));display:inline-block}
+.brand-logo {
+  background: transparent !important;
+  box-shadow: none;
+}
 
 .navbar .nav-link{color:#334155;font-weight:500}
 .navbar .nav-link.active,.navbar .nav-link:hover{color:var(--brand-dark)}
@@ -189,4 +193,95 @@ img, .ratio {
 
 .service-img-card:hover .service-overlay.creative-overlay {
   background: rgba(11, 102, 35, 0.65);
+}
+
+.service-card {
+  width: 370px;
+  max-height: 420px;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  box-shadow: 0 8px 32px rgba(40,180,120,0.10);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 16px 40px rgba(40,180,120,0.18);
+}
+
+.service-img-container {
+  width: 350px;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(135deg, #eafaf2 0%, #e0f7fa 100%);
+}
+
+.service-img {
+  width: 350px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.08) rotate(-2deg);
+}
+
+.service-icon {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  font-size: 2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #28b478 60%, #1e9e6f 100%);
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  box-shadow: 0 2px 12px rgba(40,180,120,0.15);
+  transition: background 0.3s;
+  border: 2px solid #fff;
+}
+
+.service-card:hover .service-icon {
+  background: linear-gradient(135deg, #1e9e6f 60%, #28b478 100%);
+}
+
+.card-title {
+  font-size: 1.18rem;
+  letter-spacing: 0.5px;
+}
+
+.text-brand {
+  color: #28b478;
+}
+
+.btn-brand {
+  background: linear-gradient(135deg, #28b478 60%, #1e9e6f 100%);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0 2px 8px rgba(40,180,120,0.10);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn-brand:hover {
+  background: linear-gradient(135deg, #1e9e6f 60%, #28b478 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(40,180,120,0.18);
+}
+
+.card-text {
+  font-size: 0.98rem;
+  min-height: 48px;
 }
