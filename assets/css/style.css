@@ -142,7 +142,7 @@ img, .ratio {
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-/* --- FIX FOR SERVICE CARDS --- */
+
 .service-img-card {
   border: 1px solid rgba(11, 102, 35, 0.08);
   border-radius: 16px;
@@ -179,7 +179,7 @@ img, .ratio {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(11, 102, 35, 0.45);
+  background: rgba(11, 102, 35, 0);
   opacity: 1;
   z-index: 2;
   transition: background 0.4s ease;
@@ -284,4 +284,80 @@ img, .ratio {
 .card-text {
   font-size: 0.98rem;
   min-height: 48px;
+}
+
+* Value Cards */
+.value-card {
+  border: 2px solid rgba(88, 164, 78, 0.25);
+  background: #fff;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(88, 164, 78, 0.2);
+  border-color: var(--brand-green);
+}
+
+/* Animated Shine Effect */
+
+/* Icons */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(88, 164, 78, 0.1);
+  color: var(--brand-green);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  transition: background 0.3s, transform 0.3s;
+}
+.value-card:hover .icon-circle {
+  background: var(--brand-green);
+  color: #fff;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .value-card {
+    margin-bottom: 1rem;
+  }
+}
+
+.testimonial-card {
+  border: 2px solid rgba(88, 164, 78, 0.15);
+  transition: all 0.35s ease;
+  background-color: #fff;
+}
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(88, 164, 78, 0.15);
+  border-color: var(--brand-green);
+}
+.testimonial-card img {
+  border: 2px solid var(--brand-green);
+  object-fit: cover;
+}
+.text-warning i {
+  font-size: 0.9rem;
+}
+
+.phone-text {
+  font-size: 0.9rem !important; 
+}
+
+.container-fluid {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.service-img-card {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 370px;
 }
